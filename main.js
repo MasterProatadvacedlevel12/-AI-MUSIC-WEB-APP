@@ -5,7 +5,6 @@ rightWristX=0;
 leftWristY=0;
 rightWristY=0;
 scoreleftWrist=0;
-scorerightWrist=0;
 song2 = "";
 song2status = "";
 function preload(){
@@ -25,8 +24,6 @@ function setup(){
 function gotPoses(results){
     if(results.length > 0){
         scoreleftWrist = results[0].pose.keypoints[9].score;
-        scoreleftWrist = results[0].pose.keypoints[10].score;
-
 
         console.log(results);
         leftWristX= results[0].pose.leftWrist.x;
