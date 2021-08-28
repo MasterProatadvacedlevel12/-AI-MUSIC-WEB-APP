@@ -44,6 +44,7 @@ function modelLoaded(){
 function draw(){
     image(video,0,0,600,500);
     song1status = song1.isPlaying();    
+    song2status = song2.isPlaying(); 
     fill("#FF0000");
     stroke("#FF0000");
 
@@ -57,7 +58,15 @@ function draw(){
         document.getElementById("Songy").value
     }
 
+    if(scorerightWrist > 0.2){
+        circle(rightWristX,rightWristY,20);
+        song1.stop();
+    }
 
+    if(song2status = false){
+        song2.play();
+        document.getElementById("Songy").value
+    }
 
 
 
